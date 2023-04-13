@@ -10,11 +10,10 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 //------PRODUCTOS-------//
 
 const getProducts = async () => {
-    const response = await fetch("productos.json");
-    const productos = await response.json();
-    console.log(data)
+    const response = await fetch("data.json");
+    const data = await response.json();
 
-    productos.forEach((product) => {
+    data.forEach((product) => {
         let content = document.createElement("div");
         content.className = "card";
         content.innerHTML = `
